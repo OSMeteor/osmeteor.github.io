@@ -79,7 +79,6 @@ require.config({
         //    deps: ['angular']
         //}
     },
-
     deps: [
         // kick start application... see bootstrap.js
         './bootstrap'

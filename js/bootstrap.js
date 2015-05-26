@@ -8,8 +8,8 @@ define([
 ], function (require, ng) {
     'use strict';
 
-    require(['css!cssanimate','css!cssui-bootstrap','css!css/sticky-footer-navbar.css'
-    ], function(){});
+    //require(['css!cssanimate','css!cssui-bootstrap','css!css/sticky-footer-navbar.css'
+    //], function(){});
     /*
      * place operations that need to initialize prior to app start here
      * using the `run` function on the top-level module
