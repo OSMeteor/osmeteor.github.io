@@ -5,16 +5,18 @@
 define([
     'require',
     'angular',
+    'html5shiv',
+    'respond'
+    //, 'requirecss'
 ], function (require, ng) {
     'use strict';
-
-    //require(['css!cssanimate','css!cssui-bootstrap','css!css/sticky-footer-navbar.css'
-    //], function(){});
+    //require(['css!./css/sticky-footer-navbar']);
+    require(['css!cssui-bootstrap','css!cssanimate','css!../css/sticky-footer-navbar'
+    ], function(){});
     /*
      * place operations that need to initialize prior to app start here
      * using the `run` function on the top-level module
      */
-
     require(['domReady!'], function (document) {
         ng.bootstrap(document, ['app']);
     });

@@ -8,26 +8,29 @@ require.config({
     //        env: 'node'
     //    }
     //},
-    baseUrl: '../dev/js',
+    baseUrl: './js',
     paths: {
-        "html5shiv":["http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"],
-        "respond":["http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"],
+        "html5shiv":["http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min"],
+        "respond":["http://cdn.bootcss.com/respond.js/1.4.2/respond.min"],
+        'domReady':[
+           "http://cdn.bootcss.com/require-domReady/2.0.1/domReady.min",
+            '../../bower_components/requirejs-domready/domReady'],
         'requirecss': [
-              "http://cdn.bootcss.com/require-css/0.1.8/css.js",
+              "http://cdn.bootcss.com/require-css/0.1.8/css.min",
             '../../bower_components/require-css/css'],
-        'angular': ["http://cdn.bootcss.com/angular.js/1.3.15/angular.min.js"
+        'angular': ["http://cdn.bootcss.com/angular.js/1.3.15/angular.min"
             ,'../../bower_components/angular/angular'],
         'angular-ui-router':[
-            "http://cdn.bootcss.com/angular-ui-router/0.2.15/angular-ui-router.js",
+            "http://cdn.bootcss.com/angular-ui-router/0.2.15/angular-ui-router",
             '../../bower_components/angular-ui-router/release/angular-ui-router'],
         'angular-ui-bootstrap':[
-            "http://cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap.min.js",
+            "http://cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap.min",
             '../../bower_components/angular-ui-router/release/angular-ui-router'],
         'cssui-bootstrap':[
-            "http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css"
+            "http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min"
         ],
         'cssanimate':[
-            "http://cdn.bootcss.com/animate.css/3.3.0/animate.css"
+            "http://cdn.bootcss.com/animate.css/3.3.0/animate"
         ]
         //
         ////'angular-resource':['../../bower_components/angular-resource/angular-resource'],
@@ -47,6 +50,9 @@ require.config({
      * require some fine tuning to dependency mgt'
      */
     shim: {
+        //"html5shiv":{
+        //    deps: ['requirecss']
+        //},
         "angular": {
             exports: 'angular'
         },
@@ -83,5 +89,12 @@ require.config({
         // kick start application... see bootstrap.js
         './bootstrap'
     ],
+    map: {
+        '*': {
+            'css': 'requirecss'
+        }
+    },
     urlArgs: "bust=" +  (new Date()).getTime()
 });
+
+//require(['requirecss']);
