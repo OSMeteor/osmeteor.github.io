@@ -9,23 +9,28 @@ require.config({
     //    }
     //},
     baseUrl: './js',
+    //enforceDefine: true,
     paths: {
         "html5shiv":["http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min"],
         "respond":["http://cdn.bootcss.com/respond.js/1.4.2/respond.min"],
         'domReady':[
-           "http://cdn.bootcss.com/require-domReady/2.0.1/domReady.min",
-            '../../bower_components/requirejs-domready/domReady'],
+           "http://cdn.bootcss.com/require-domReady/2.0.1/domReady.min"],
         'requirecss': [
-              "http://cdn.bootcss.com/require-css/0.1.8/css.min",
-            '../../bower_components/require-css/css'],
-        'angular': ["http://cdn.bootcss.com/angular.js/1.3.15/angular.min"
-            ,'../../bower_components/angular/angular'],
+              "http://cdn.bootcss.com/require-css/0.1.8/css.min"],
+        'angular': [
+            "http://cdn.bootcss.com/angular.js/1.3.15/angular.min",
+            "./vendor/angular.min"
+        ],
         'angular-ui-router':[
-            "http://cdn.bootcss.com/angular-ui-router/0.2.15/angular-ui-router",
-            '../../bower_components/angular-ui-router/release/angular-ui-router'],
+            "http://cdn.bootcss.com/angular-ui-router/0.2.13/angular-ui-router.min",
+            "./vendor/angular-ui-router.min"
+        ],
         'angular-ui-bootstrap':[
             "http://cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap.min",
-            '../../bower_components/angular-ui-router/release/angular-ui-router'],
+            './vendor/ui-bootstrap.min'
+           ],
+        'angular-ui-bootstrap-tpls':[
+            "http://cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min"],
         'cssui-bootstrap':[
             "http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min"
         ],
@@ -53,14 +58,17 @@ require.config({
         //"html5shiv":{
         //    deps: ['requirecss']
         //},
-        "angular": {
+        'angular': {
             exports: 'angular'
         },
-        "angular-ui-router":{
+        'angular-ui-router':{
             deps: ['angular']
         },
         'angular-ui-bootstrap':{
             deps: ['angular']
+        },
+        'angular-ui-bootstrap-tpls':{
+            deps: ['angular','angular-ui-bootstrap']
         }
 
         //'lodash':{
@@ -86,15 +94,21 @@ require.config({
         //}
     },
     deps: [
+        //'./mainapp'
+        //,
         // kick start application... see bootstrap.js
         './bootstrap'
     ],
+    //加载requirejs 之前
+    //bundles: {
+    //    'primary': ['main', 'util', 'text', 'text!template.html'],
+    //    'secondary': ['text!secondary.html']
+    //},
     map: {
         '*': {
             'css': 'requirecss'
         }
     },
+    waitSeconds: 15,
     urlArgs: "bust=" +  (new Date()).getTime()
 });
-
-//require(['requirecss']);
