@@ -30,7 +30,9 @@ require.config({
             './vendor/ui-bootstrap.min'
            ],
         'angular-ui-bootstrap-tpls':[
-            "http://cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min"],
+            "http://cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min"
+            './vendor/ui-bootstrap-tpls.min'
+        ],
         'cssui-bootstrap':[
             "http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min"
         ],
@@ -109,6 +111,6 @@ require.config({
             'css': 'requirecss'
         }
     }
-    ,waitSeconds: 15
+    ,waitSeconds: 5
     //,urlArgs: "bust=" +  (new Date()).getTime()
 });
