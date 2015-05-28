@@ -30,7 +30,7 @@ require.config({
             './vendor/ui-bootstrap.min'
            ],
         'angular-ui-bootstrap-tpls':[
-            "http://cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min"
+            "http://cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min",
             './vendor/ui-bootstrap-tpls.min'
         ],
         'cssui-bootstrap':[
