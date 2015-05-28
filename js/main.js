@@ -9,7 +9,7 @@ require.config({
     //    }
     //},
     baseUrl: './js',
-    //enforceDefine: true,
+    enforceDefine: true,
     paths: {
         "html5shiv":["http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min"],
         "respond":["http://cdn.bootcss.com/respond.js/1.4.2/respond.min"],
