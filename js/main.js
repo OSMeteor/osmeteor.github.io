@@ -111,6 +111,6 @@ require.config({
             'css': 'requirecss'
         }
     }
-    ,waitSeconds: 5
+    ,waitSeconds: 2
     //,urlArgs: "bust=" +  (new Date()).getTime()
 });
