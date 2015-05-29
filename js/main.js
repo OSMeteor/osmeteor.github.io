@@ -11,12 +11,20 @@ require.config({
     baseUrl: './js',
     enforceDefine: false,
     paths: {
-        "html5shiv":["http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min"],
-        "respond":["http://cdn.bootcss.com/respond.js/1.4.2/respond.min"],
+        "html5shiv":["http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min"
+            ,"./vendor/html5shiv.min"
+        ],
+        "respond":["http://cdn.bootcss.com/respond.js/1.4.2/respond.min"
+            ,"./vendor/respond.min"
+        ],
         'domReady':[
-           "http://cdn.bootcss.com/require-domReady/2.0.1/domReady.min"],
+           "http://cdn.bootcss.com/require-domReady/2.0.1/domReady.min"
+            ,"./vendor/domReady"
+        ],
         'requirecss': [
-              "http://cdn.bootcss.com/require-css/0.1.8/css.min"],
+              "http://cdn.bootcss.com/require-css/0.1.8/css.min"
+            ,"./vendor/css.min"
+        ],
         'angular': [
             "http://cdn.bootcss.com/angular.js/1.3.15/angular.min",
             "./vendor/angular.min"
@@ -35,9 +43,11 @@ require.config({
         ],
         'cssui-bootstrap':[
             "http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min"
+            ,'./vendor/bootstrap.min'
         ],
         'cssanimate':[
             "http://cdn.bootcss.com/animate.css/3.3.0/animate"
+            ,'./vendor/animate.min'
         ]
         //
         ////'angular-resource':['../../bower_components/angular-resource/angular-resource'],
@@ -111,6 +121,6 @@ require.config({
             'css': 'requirecss'
         }
     }
-    ,waitSeconds: 2
+    ,waitSeconds: 1
     //,urlArgs: "bust=" +  (new Date()).getTime()
 });

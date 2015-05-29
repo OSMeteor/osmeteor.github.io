@@ -1,5 +1,6 @@
 define([
-   './AccordionDemoCtrl'
+   './AccordionDemoCtrl',
+   './CarouselDemoCtrl'
 ], function () {
 
 });
