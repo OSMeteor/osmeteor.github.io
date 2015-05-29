@@ -3,7 +3,7 @@ define(['./module'], function (controllers) {
     controllers.controller('CarouselDemoCtrl', function ($scope) {
         $scope.myInterval = 5000;
         var slides = $scope.slides = [{}];
-        var slides = $scope.slides =  [{"active":false},
+        var slides = $scope.slides =  [
             {"image":"http://placekitten.com/602/300","text":"Extra Kittys","active":false},
             {"image":"http://placekitten.com/603/300","text":"Lots of Felines","active":false},
             {"image":"http://placekitten.com/604/300","text":"Surplus Cutes","active":false},
